@@ -1,1 +1,9 @@
 /* your css code */
+@include media("<wide"){
+    width: 100%;
+}
+
+@include media("<medium"){
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
