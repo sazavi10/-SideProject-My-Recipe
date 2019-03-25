@@ -1,25 +1,17 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
   "dependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-scripts": "2.1.8"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "dotenv": "^7.0.0",
+    "immutable": "^4.0.0-rc.12",
+    "include-media": "^1.4.9",
+    "node-sass": "^4.11.0",
+    "query-string": "^6.4.0",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-actions": "^2.6.5",
+    "redux-pender": "^2.0.12",
+    "sass-loader": "^7.1.0"
+  }
 }
