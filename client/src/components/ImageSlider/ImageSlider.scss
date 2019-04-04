@@ -1,0 +1,34 @@
+.image_slider {
+      max-width: 1400px;
+      height: 560px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 60px;
+    .slider {
+        width : 14000px;
+        display: flex;
+
+        .slide {
+            width: 1400px;
+            height: 560px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .buttons {
+        > div {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            max-width: 1400px;
+            font-size: 2.5rem;
+            color: #000;
+            opacity: 0.6;
+            &.nextarrow {
+                left: auto;
+                right: 20px;
+            }
+        }
+    }
+}

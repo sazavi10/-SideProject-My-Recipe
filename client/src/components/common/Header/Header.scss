@@ -1,1 +1,117 @@
 /* your css code */
+.header {
+    position: fixed;
+    border-bottom : 1px solid #dbdbdb;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+    //overflow: hidden;
+    //@include material-shadow(1, 0.5);
+    .inner {
+        max-width: 1400px;
+        height: 80px;
+        margin:0 auto;
+        display: flex;
+        align-items: center;
+        h1 { 
+            font-size: 1.8rem; 
+            color: #3e4b9f;
+            a:hover {
+                color: #3e4b9f;
+            }   
+        }
+        nav ul {
+            display: flex;
+            margin-left : 2.5rem;
+            li {
+                margin: 0 15px;
+                a {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .util {
+            input, button { height: 40px; }
+            display: flex;
+            margin-left: auto;
+            align-items: center;
+            .myprofil { 
+                position: relative;
+                cursor: pointer;
+                padding: 20px 10px;
+                > div {
+                   background: #fff;
+                }
+                ul {
+                    position: absolute;
+                    //display: none;
+                    height: 0;
+                    overflow: hidden;
+                    animation: fadeOut 0.25s ease-in both;
+                    border-radius: 10px;
+                    @include material-shadow(1, 0.5);
+                    width: 160px;
+                    background: #fff;
+                    right: 0;
+                    top: 60px;
+                    border: 1px solid #dbdbdb;
+                    padding: 15px 0;
+                    &.active {  
+                        animation: fadeIn 0.25s ease-in both;
+                     }
+                    li {
+                        padding: 0;
+                    }
+                    a {
+                        padding: 8px;
+                        width: 100%;
+                        text-align: center;
+                        display: block;
+                        &:hover {
+                            background: #748cfa;
+                            color: #fff;
+                        }
+                    }
+                }
+                div {
+                    margin-left: 10px;
+                    display: flex;
+                    align-items: center;
+                    img {
+                        border-radius: 50px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .search_box {
+                margin-right: 20px;
+                input {
+                    width: 180px;
+                    border-right: none;
+                    padding-left: 8px;
+                    -webkit-transition:width 0.5s;
+                    &:focus {
+                        width: 260px;
+                    }
+                }
+                button {
+                   width: 50px; 
+                   font-weight: 400;
+                   border-left: none;
+                   i { color: #424242; font-size: 1.2rem;}
+                }
+            }
+            > div > ul {
+                display: flex;
+                align-items: center;
+                li {
+                    border-left: 1px solid #424242;
+                    padding: 0 10px;
+                    &:first-child {border: none}
+                } 
+            }
+        }
+
+    }
+}

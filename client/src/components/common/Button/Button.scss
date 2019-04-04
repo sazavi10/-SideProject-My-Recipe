@@ -1,0 +1,35 @@
+.button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    padding: 0 15px;
+    font-weight: bold;
+    background: #748cfa;
+    color: #fff;
+    border-radius: 80px;
+    -webkit-transition:background-color 0.4s;
+
+    &.lessrounded {
+        border-radius: 4px;
+    }
+
+    &.small { width:80px; }
+    &.big { width: 300px; }
+
+    &.gray {
+        color: #424242;
+        background: #dbdbdb 
+    }
+    &.white {
+        background: #fff;
+        border: 1px solid #748cfa;
+        color: #748cfa;
+    }
+    &.white:hover {
+        background: #748cfa;
+        color: #fff;
+    }
+}

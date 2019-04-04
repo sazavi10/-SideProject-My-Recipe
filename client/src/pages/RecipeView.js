@@ -1,10 +1,12 @@
 import React from 'react';
 import PageTemplate from 'components/common/PageTemplate';
+import RecipeViewWrapper from 'components/RecipeView/RecipeViewWrapper';
 
-const RecipeView = () => {
-    return(
+const RecipeView = ({match}) => {
+const { id } = match.params;
+ return(
         <PageTemplate>
-        <div>레시피 뷰</div>
+            <RecipeViewWrapper id = {id}/>
         </PageTemplate>
     )
 }

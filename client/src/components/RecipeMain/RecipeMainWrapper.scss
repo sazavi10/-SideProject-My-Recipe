@@ -1,0 +1,15 @@
+.title_area {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    h2 { 
+        font-weight: normal;
+        font-size: 1.2rem;
+    }
+    span { 
+        position: absolute;
+        right: 0;
+    }
+}

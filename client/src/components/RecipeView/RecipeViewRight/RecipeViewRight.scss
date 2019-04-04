@@ -1,0 +1,83 @@
+.recipe_view_right {
+    margin-left: auto;
+    height: 0px;
+    position: fixed;
+    width: 1400px;
+    > div {
+        width: 460px;
+        margin-left: auto;
+        .view_right_header {
+            .category {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    background: #ededed;
+                    border-radius: 50px;
+                    text-align: center;
+                    padding: 8px 12px;
+                    font-size: 0.8rem;
+                    margin-right: 6px;
+                }
+            }
+            h2 { 
+                font-weight: normal;
+                margin: 15px 0 10px;
+            }
+            p { 
+                color: #999;
+                margin: 0;
+                line-height: 1.4rem;
+            }
+        }
+        .recipe_info {
+            margin: 20px 0;
+            ul {
+                display: flex;
+                margin-left: 8px;
+               li {
+                    display: flex;
+                    align-items: center;
+                    color: #999;
+                    i {
+                        font-size: 1.5rem;
+                    }
+                    span {
+                        margin: 0 50px 0 8px;
+                    }
+                }
+            }
+        }
+        .buttons {
+            display: flex;
+            .button {
+                width: 40%;
+                margin-right: 2%;
+                font-weight: normal;
+                font-size: 0.9rem;
+                i {
+                    font-size: 1.3rem;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .writer_info {
+            border-top: 1px solid #ededed;
+            margin-top: 30px;
+            padding-top: 30px;
+            display: flex;
+            align-items: center;
+            .writer_cover img { border-radius: 70px; } 
+            .writer_profile {
+                margin-left: 15px;
+                div { 
+                    margin-bottom: 4px;
+                 }
+                p { 
+                    margin: 0;
+                    color: #999;
+                 }
+            }
+
+        }
+    }
+}

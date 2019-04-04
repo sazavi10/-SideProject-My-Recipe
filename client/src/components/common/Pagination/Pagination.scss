@@ -1,0 +1,11 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    margin: 0 auto;
+
+    .number{
+        text-align: center;
+        flex: 1;
+    }
+}

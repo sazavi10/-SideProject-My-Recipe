@@ -5,9 +5,9 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 const Footer = () => (
-  <div className={cx('')}>
-    Footer
-  </div>
+  <footer className={cx('footer')}>
+    ©2019 MY RECIPES, by Ryan K
+  </footer>
 );
 
 export default Footer;

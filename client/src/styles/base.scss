@@ -15,15 +15,20 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: #424242;
 }
 
 * {
     box-sizing: inherit;
 }
 
+
 a {
     text-decoration: inherit;
     color: inherit;
+    &:hover {
+        color: #748cfa
+    }   
 }
 main {
     display: block;
@@ -48,6 +53,8 @@ pre {
 a {
     background-color: transparent;
 }
+
+ul, li {margin: 0; padding: 0; list-style: none;}
 
 abbr[title] {
     border-bottom: none; /* 1 */
@@ -91,15 +98,20 @@ img {
     border-style: none;
 }
 
+button {
+    cursor: pointer
+}
 button,
 input,
 optgroup,
 select,
 textarea {
     font-family: inherit; /* 1 */
-    font-size: 100%; /* 1 */
-    line-height: 1.15; /* 1 */
+    font-size: 1rem; /* 1 */
+    //line-height: 1.15; /* 1 */
     margin: 0; /* 2 */
+    border: 1px solid #dbdbdb;
+    background: none;
 }
 
 button,

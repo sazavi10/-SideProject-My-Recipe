@@ -1,0 +1,80 @@
+.recipe_cate {
+    margin-bottom: 30px;
+    
+    > div > ul {
+        display: flex;
+    }
+    .recipe_category ul {
+        justify-content: center;
+        > li {
+            position: relative;
+            text-align: center;
+            padding-left: 70px;
+            font-size: 1rem;
+            span {
+                cursor: pointer;
+                &:hover {
+                    color: #748cfa;
+                }
+                display: flex;
+                align-items: center;  
+                &:after {
+                    content: "|"; 
+                    color: #dbdbdb;
+                    height: 18px;
+                    overflow: hidden;
+                    margin-left: 70px;
+                }
+            }
+            > ul {
+                height: 0;
+                overflow: hidden;
+                animation: fadeOut 0.25s ease-in both;
+                &.active {
+                    animation: fadeIn 0.25s ease-in both;
+                }
+                @include material-shadow(1, 0.5);
+                flex-flow: column;
+                position: absolute;
+                top: 30px;
+                left: calc(50% - 80px);
+                border: 1px solid #ddd;
+                width: 160px;
+                background: #fff;
+                padding: 10px 0;
+                > li {
+                    font-size: 0.9rem;
+                    color: #999;
+                    cursor: pointer;
+                    padding: 10px 0;
+                    &:hover { 
+                        background: #748cfa;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        li:last-child span {
+            margin-right: 70px;
+        }
+        li:last-child span:after{
+            display: none;
+        }
+    }
+    .set_filter_item {
+        margin-top: 50px;
+        display: flex;
+        > ul {
+            margin: 0 10px 0 auto; 
+            > li {
+                cursor: pointer;
+                border-radius: 100px;
+                background: #748cfa;
+                color: #fff;
+                padding: 10px 15px;
+                margin: 0 5px;
+                svg { margin-left : 8px;}
+            }
+        }
+    }
+}
