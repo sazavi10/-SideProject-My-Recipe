@@ -6,11 +6,11 @@ import Footer from 'components/common/Footer';
 
 const cx = classNames.bind(styles);
 
-const PageTemplate = ({children}) => (
+const PageTemplate = ({children, footerType}) => (
   <div className={cx('page_wrapper')}>
     <Header/>
     <main>{children}</main>
-    <Footer/>
+    <Footer footerType={footerType}/>
   </div>
 );
 

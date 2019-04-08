@@ -5,7 +5,7 @@ import Category from './Category';
 
 const cx = classNames.bind(styles);
 
-const RecipeCategory = ({category, title, onVisible, setFilter, onSetFilter, onDeleteFilter}) => {
+const RecipeCategory = ({category, onVisible, setFilter, onSetFilter, onDeleteFilter}) => {
     
     const recipeCategory = category.map(
         (category, i) => {
@@ -14,7 +14,6 @@ const RecipeCategory = ({category, title, onVisible, setFilter, onSetFilter, onD
             <Category
                 key={i}
                 index={i}
-                category={category}
                 selected={selected}
                 cateTitle={cateTitle}
                 onVisible={onVisible}
@@ -35,7 +34,7 @@ const RecipeCategory = ({category, title, onVisible, setFilter, onSetFilter, onD
     const setFilterItem = setFielterValue.map(
         (item, idx) => {
             const selectKey = setFielterKey[idx]
-            return <li key={idx} onClick={()=> onDeleteFilter(selectKey)}>{item} <i className="fas fa-times"></i></li>
+            return <li key={idx} onClick={()=> onDeleteFilter(selectKey)}>{item} <i className='fas fa-times'></i></li>
         }
     )
 
@@ -46,11 +45,13 @@ const RecipeCategory = ({category, title, onVisible, setFilter, onSetFilter, onD
                     {recipeCategory}   
                 </ul>
             </div>
+            {setFilter.size!==0? 
             <div className={cx('set_filter_item')}>
                 <ul>
                     {setFilterItem}   
                 </ul>
             </div>
+            : ''}
         </div>
     )
 

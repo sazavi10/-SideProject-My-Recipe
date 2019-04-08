@@ -9,7 +9,7 @@ export const ONDELETEFILTER = 'RecipeListModule/ONDELETEFILTER';
 
 export const initialize = createAction(INITIALIZE);
 export const onVisible = createAction(ONVISIBLE);
-export const onSetFilter = createAction(ONSETFILTER,({id, childId}) => ({id, childId}));
+export const onSetFilter = createAction(ONSETFILTER);
 export const onDeleteFilter = createAction(ONDELETEFILTER);
 
 const initialState = Map({
@@ -51,15 +51,20 @@ const initialState = Map({
             }),
             Map({    
                 id: 5,
-                cateTitle : '정렬',
-                cateName : 'sort',
-                cateArray : ['최신순', '과거순', '인기순'],
+                cateTitle : '인원',
+                cateName : 'serving',
+                cateArray : ['1인분', '2인분', '3인분'],
                 selected: false,
-            })
+            }),
+            Map({    
+                id: 6,
+                cateTitle : '난이도',
+                cateName : 'difficulty',
+                cateArray : ['쉬움', '중간', '어려움', '자격증필요'],
+                selected: false,
+            }),
         ]),
-        setFilter: Map({
-            sort : '최신순'
-        }),
+        setFilter: Map({}),
         prevId:'',
     })
 
@@ -68,7 +73,6 @@ export default handleActions({
     [ONVISIBLE]: (state, action) => {
         const { payload: id } = action;
         const prevId = state.get('prevId');
-        console.log(id)
         const cate = state.get('category').updateIn([prevId, 'selected'], selected => !selected)
                     .updateIn([id, 'selected'], selected => !selected)
         return  state.set('category',cate).set('prevId',id)

@@ -5,7 +5,6 @@ import RecipeCategory from 'components/RecipeList/RecipeCategory'
 import * as recipeListModule from 'store/modules/RecipeListModule';
 
 class RecipeCategoryContainer extends Component {
-
     componentDidMount() {
         const { RecipeListModule } = this.props;
         RecipeListModule.initialize();

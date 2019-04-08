@@ -416,12 +416,12 @@ export const recipeData = List([
         recipeType:'1pot',
         cusine:'',
         specialDiet:'', 
-        recipeLike:'50,000',
+        recipeLike:'50,000',//!//
         cookingTime:'10분미만',
         serving:'1인분',
-        writer: '푸드파이터',
-        profileImage: 'https://placeimg.com/70/70/7',
-        profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
+        writer: '푸드파이터',//!//
+        profileImage: 'https://placeimg.com/70/70/7',//!//
+        profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',//!//
         cookingTip : '굽는거 어려워요 조심 조심~', 
         difficulty : '쉬움' 
       }),

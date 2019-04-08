@@ -26,7 +26,7 @@ const Header = () => {
           <div className={cx('search_box')}>
             <SearchBox/>
           </div>
-          <Button color="white" to='/'>레시피 등록</Button>
+          <Button color="white" to='/recipewrite'>레시피 등록</Button>
           <RightSide logged = {logged}/>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Category = ({index, category, cateTitle, selected, onVisible, onSetFilter, data}) => {
+const Category = ({index, cateTitle, selected, onVisible, onSetFilter, data}) => {
 return (
     <li onClick ={() => onVisible(index)}><span>{cateTitle}</span>
       <ul className={selected===true?'active':null}>
