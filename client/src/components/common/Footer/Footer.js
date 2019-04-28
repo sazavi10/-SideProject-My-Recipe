@@ -7,6 +7,7 @@ const cx = classNames.bind(styles);
 
 const Footer = ({footerType}) => (
   
+<<<<<<< HEAD
   footerType === true?
   <footer className={cx('write_footer ')}>
     <button>발행하기</button>
@@ -14,6 +15,13 @@ const Footer = ({footerType}) => (
   :<footer className={cx('footer')}>
     ©2019 MY RECIPES, by Ryan K
   </footer>
+=======
+  footerType !== true?
+ <footer className={cx('footer')}>
+    ©2019 MY RECIPES, by Ryan K
+  </footer>
+  : ''
+>>>>>>> Server&Db set end! write&view end - img upload ing
 );
 
 export default Footer;

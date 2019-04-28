@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './RecipeViewRight.scss';
 import classNames from 'classnames/bind';
+<<<<<<< HEAD
 import { recipeData } from 'lib/dummy';
 import Button from 'components/common/Button'
 
@@ -9,6 +10,13 @@ const RecipeViewRight = ({id}) => {
   const data = recipeData.get(id);
   const { ingredient, recipeType, cusine, specialDiet, recipeTitle, recipeDescription, writer, profileImage, profileIntro, recipeLike, serving, cookingTime, difficulty } = data.toJS();
 
+=======
+import Button from 'components/common/Button'
+
+const RecipeViewRight = ({ ingredient, recipeType, cusine, specialDiet, 
+  recipeTitle, recipeDescription, recipeLike, serving, cookingTime, difficulty }) => {
+  const cx = classNames.bind(styles);
+>>>>>>> Server&Db set end! write&view end - img upload ing
   return(
     <div className={cx('recipe_view_right')}>
       <div>
@@ -33,6 +41,10 @@ const RecipeViewRight = ({id}) => {
           <Button color='violet'><i className='fas fa-heart'></i> <span>좋아요 {recipeLike}</span></Button>
           <Button color='gray'><i className='far fa-comment-dots'></i> <span>댓글 {recipeLike}</span></Button>
         </div>
+<<<<<<< HEAD
+=======
+        {/*
+>>>>>>> Server&Db set end! write&view end - img upload ing
         <div className={cx('writer_info')}>
           <div className={cx('writer_cover')}><img src={profileImage} alt={writer}/></div>
           <div className={cx('writer_profile')}>
@@ -40,6 +52,10 @@ const RecipeViewRight = ({id}) => {
             <p>{profileIntro}</p>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+        */}
+>>>>>>> Server&Db set end! write&view end - img upload ing
       </div>
     </div>
   );

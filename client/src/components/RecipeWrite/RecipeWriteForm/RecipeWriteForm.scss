@@ -1,4 +1,8 @@
 .recipe_write_form {
+<<<<<<< HEAD
+=======
+    margin-bottom: 150px;
+>>>>>>> Server&Db set end! write&view end - img upload ing
     textarea {
         width: 100%;
         padding: 10px;
@@ -112,4 +116,21 @@
             }
         }
     }
+<<<<<<< HEAD
+=======
+    footer{
+        position: fixed;
+        width: 100%;
+        background: #ededed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        button {
+            padding:25px 45px;
+            background: #424242;
+            color: #fff;
+            margin-left: auto;
+        }
+    }
+>>>>>>> Server&Db set end! write&view end - img upload ing
 }

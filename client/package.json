@@ -1,7 +1,11 @@
 {
   "name": "client",
   "version": "0.1.0",
+<<<<<<< HEAD
   "private": true,
+=======
+  "private": true, 
+>>>>>>> Server&Db set end! write&view end - img upload ing
   "dependencies": {
     "@babel/core": "7.2.2",
     "@svgr/webpack": "4.1.0",
@@ -35,6 +39,10 @@
     "jest-pnp-resolver": "1.0.2",
     "jest-resolve": "23.6.0",
     "jest-watch-typeahead": "^0.2.1",
+<<<<<<< HEAD
+=======
+    "koa-multer": "^1.0.2",
+>>>>>>> Server&Db set end! write&view end - img upload ing
     "mini-css-extract-plugin": "0.5.0",
     "multer": "^1.4.1",
     "node-sass": "^4.11.0",
@@ -127,5 +135,10 @@
     "presets": [
       "react-app"
     ]
+<<<<<<< HEAD
   }
+=======
+  },
+  "proxy": "http://localhost:4000"
+>>>>>>> Server&Db set end! write&view end - img upload ing
 }

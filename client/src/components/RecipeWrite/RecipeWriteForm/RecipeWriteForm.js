@@ -20,12 +20,32 @@ class RecipeWriteForm extends Component {
     changeMultiInput({ name, value, index, targetName });
   }
 
+<<<<<<< HEAD
   render(){
     const { addMultiInput, deleteMultiInput, recipeCoverImage, recipeTitle, recipeDescription, ingredientList, recipeBody, cookingTip, category } = this.props;
     const { handleChange, handleMultiChange } = this;
     const categoryList = category.map(
       (category, i) => {
           const { cateTitle, cateArray, cateName} = category.toJS();
+=======
+  handleImageInput = (index)  => (e) => {
+    e.preventDefault();
+    const { onChangeImageInput, handleFileChange } = this.props;
+    const fileName = e.target.value;
+    const { files } = e.target;
+    const file =  window.URL.createObjectURL(files[0]);
+    handleFileChange(e.target.name, e.target.files[0])
+    onChangeImageInput({ file, fileName, index })
+  }
+        
+  render(){
+    const { addMultiInput, deleteMultiInput, handleSubmit, recipeCoverImage, recipeTitle, recipeDescription, 
+            ingredientList, recipeBody, cookingTip, category, uploadImgArray } = this.props;
+    const { handleChange, handleMultiChange, handleImageInput } = this;
+    const categoryList = category.map(
+      (category, i) => {
+          const { cateTitle, cateArray, cateName } = category.toJS();
+>>>>>>> Server&Db set end! write&view end - img upload ing
           return(
           <InigredientItem
               key={i}
@@ -67,9 +87,15 @@ class RecipeWriteForm extends Component {
                 <i className='fas fa-camera'></i>
                 <p>Step {i+1} 조리사진 업로드</p>
               </div>
+<<<<<<< HEAD
               <input type='file' name='image' 
               value={ recipeBody.get(i).get('ingredient') } 
               onChange={handleMultiChange(i, targetName)} />
+=======
+              <input type='file' name={`recipeBody${i}`}
+              value={ uploadImgArray.get(i+1).get('fileName') } 
+              onChange={handleImageInput(i+1)} />
+>>>>>>> Server&Db set end! write&view end - img upload ing
             </div>
             <div>
               <textarea placeholder='레시피를 간단히 설명해주세요!' name='text' 
@@ -85,7 +111,10 @@ class RecipeWriteForm extends Component {
         )
       }
     )
+<<<<<<< HEAD
 
+=======
+>>>>>>> Server&Db set end! write&view end - img upload ing
     return (
       <div className={cx('recipe_write_form')}>
         <div className={cx('image_upload')} style={recipeCoverImage !=='' ? {backgroundImage:`url('${recipeCoverImage}')`} : {}}>
@@ -93,7 +122,11 @@ class RecipeWriteForm extends Component {
             <i className='fas fa-camera'></i>
             <p>커버 이미지 업로드</p>
           </div>
+<<<<<<< HEAD
           <input type='file' name='recipeCoverImage'  value={recipeCoverImage} onChange={handleChange}/>
+=======
+          <input type='file' name='recipeCoverImage' file={uploadImgArray.get(0).get('file')} value={uploadImgArray.get(0).get('fileName')} onChange={handleImageInput(0)}/>
+>>>>>>> Server&Db set end! write&view end - img upload ing
         </div>
         <div className={cx('title')}>
           <input type='text' name='recipeTitle' placeholder='제목을 입력해주세요' onChange={handleChange} value={recipeTitle}/>
@@ -125,6 +158,10 @@ class RecipeWriteForm extends Component {
           <h2>요리팁</h2>
           <textarea placeholder='내용을 입력해 주세요' name='cookingTip' onChange={handleChange} value={cookingTip}/>
         </div>
+<<<<<<< HEAD
+=======
+        <footer className={cx('write_footer ')}><button onClick={handleSubmit}>발행하기</button></footer>
+>>>>>>> Server&Db set end! write&view end - img upload ing
     </div>
     )
   }

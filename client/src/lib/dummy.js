@@ -50,6 +50,7 @@ export const recipeData = List([
         recipeType:'1pot',
         cusine:'아프리칸',
         specialDiet:'Dairy free', 
+<<<<<<< HEAD
         recipeLike:'50,000',
         cookingTime:'10분미만',
         serving:'1인분',
@@ -58,6 +59,16 @@ export const recipeData = List([
         profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
         cookingTip : '굽는거 어려워요 조심 조심~',
         difficulty : '쉬움'
+=======
+        cookingTime:'10분미만',
+        serving:'1인분',
+        cookingTip : '굽는거 어려워요 조심 조심~',
+        difficulty : '쉬움',
+        recipeLike:'50,000',
+        writer: '푸드파이터',
+        profileImage: 'https://placeimg.com/70/70/0',
+        profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
+>>>>>>> Server&Db set end! write&view end - img upload ing
       }),
       Map({
         _id:1, 
@@ -100,6 +111,7 @@ export const recipeData = List([
         recipeType:'1pot',
         cusine:'아프리칸',
         specialDiet:'Dairy free', 
+<<<<<<< HEAD
         recipeLike:'50,000',
         cookingTime:'10분미만',
         serving:'1인분',
@@ -108,6 +120,16 @@ export const recipeData = List([
         profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
         cookingTip : '굽는거 어려워요 조심 조심~', 
         difficulty : '쉬움' 
+=======
+        cookingTime:'10분미만',
+        serving:'1인분',
+        cookingTip : '굽는거 어려워요 조심 조심~',
+        difficulty : '쉬움',
+        recipeLike:'50,000',
+        writer: '푸드파이터',
+        profileImage: 'https://placeimg.com/70/70/0',
+        profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
+>>>>>>> Server&Db set end! write&view end - img upload ing
       }),
       Map({
         _id:2, 
@@ -149,6 +171,7 @@ export const recipeData = List([
         ingredient: '소고기', 
         recipeType:'',
         cusine:'아프리칸',
+<<<<<<< HEAD
         specialDiet:'', 
         recipeLike:'50,000',
         cookingTime:'10분미만',
@@ -158,6 +181,17 @@ export const recipeData = List([
         profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
         cookingTip : '굽는거 어려워요 조심 조심~',
         difficulty : '쉬움'
+=======
+        specialDiet:'Dairy free', 
+        cookingTime:'10분미만',
+        serving:'1인분',
+        cookingTip : '굽는거 어려워요 조심 조심~',
+        difficulty : '쉬움',
+        recipeLike:'50,000',
+        writer: '푸드파이터',
+        profileImage: 'https://placeimg.com/70/70/0',
+        profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
+>>>>>>> Server&Db set end! write&view end - img upload ing
       }),
       Map({
         _id:3, 
@@ -199,6 +233,7 @@ export const recipeData = List([
         ingredient: '소고기', 
         recipeType:'1pot',
         cusine:'',
+<<<<<<< HEAD
         specialDiet:'', 
         recipeLike:'50,000',
         cookingTime:'10분미만',
@@ -208,6 +243,17 @@ export const recipeData = List([
         profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
         cookingTip : '굽는거 어려워요 조심 조심~', 
         difficulty : '쉬움' 
+=======
+        specialDiet:'Dairy free', 
+        cookingTime:'10분미만',
+        serving:'1인분',
+        cookingTip : '굽는거 어려워요 조심 조심~',
+        difficulty : '쉬움',
+        recipeLike:'50,000',
+        writer: '푸드파이터',
+        profileImage: 'https://placeimg.com/70/70/0',
+        profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
+>>>>>>> Server&Db set end! write&view end - img upload ing
       }),
       Map({
         _id:4, 
@@ -249,6 +295,7 @@ export const recipeData = List([
         ingredient: '소고기', 
         recipeType:'1pot',
         cusine:'아프리칸',
+<<<<<<< HEAD
         specialDiet:'', 
         recipeLike:'50,000',
         cookingTime:'10분미만',
@@ -258,6 +305,17 @@ export const recipeData = List([
         profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
         cookingTip : '굽는거 어려워요 조심 조심~', 
         difficulty : '쉬움' 
+=======
+        specialDiet:'Dairy free', 
+        cookingTime:'10분미만',
+        serving:'1인분',
+        cookingTip : '굽는거 어려워요 조심 조심~',
+        difficulty : '쉬움',
+        recipeLike:'50,000',
+        writer: '푸드파이터',
+        profileImage: 'https://placeimg.com/70/70/0',
+        profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
+>>>>>>> Server&Db set end! write&view end - img upload ing
       }),
       Map({
         _id:5, 
@@ -299,6 +357,7 @@ export const recipeData = List([
         ingredient: '소고기', 
         recipeType:'1pot',
         cusine:'아프리칸',
+<<<<<<< HEAD
         specialDiet:'', 
         recipeLike:'50,000',
         cookingTime:'10분미만',
@@ -308,6 +367,17 @@ export const recipeData = List([
         profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
         cookingTip : '굽는거 어려워요 조심 조심~', 
         difficulty : '쉬움' 
+=======
+        specialDiet:'Dairy free', 
+        cookingTime:'10분미만',
+        serving:'1인분',
+        cookingTip : '굽는거 어려워요 조심 조심~',
+        difficulty : '쉬움',
+        recipeLike:'50,000',
+        writer: '푸드파이터',
+        profileImage: 'https://placeimg.com/70/70/0',
+        profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)', 
+>>>>>>> Server&Db set end! write&view end - img upload ing
       }),
       Map({
         _id:6, 
@@ -349,6 +419,7 @@ export const recipeData = List([
         ingredient: '소고기', 
         recipeType:'1pot',
         cusine:'',
+<<<<<<< HEAD
         specialDiet:'', 
         recipeLike:'50,000',
         cookingTime:'10분미만',
@@ -358,6 +429,17 @@ export const recipeData = List([
         profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
         cookingTip : '굽는거 어려워요 조심 조심~', 
         difficulty : '쉬움' 
+=======
+        specialDiet:'Dairy free', 
+        cookingTime:'10분미만',
+        serving:'1인분',
+        cookingTip : '굽는거 어려워요 조심 조심~',
+        difficulty : '쉬움',
+        recipeLike:'50,000',
+        writer: '푸드파이터',
+        profileImage: 'https://placeimg.com/70/70/0',
+        profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)', 
+>>>>>>> Server&Db set end! write&view end - img upload ing
       }),
       Map({
         _id:7, 
@@ -415,6 +497,7 @@ export const recipeData = List([
         ingredient: '소고기', 
         recipeType:'1pot',
         cusine:'',
+<<<<<<< HEAD
         specialDiet:'', 
         recipeLike:'50,000',//!//
         cookingTime:'10분미만',
@@ -424,6 +507,17 @@ export const recipeData = List([
         profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',//!//
         cookingTip : '굽는거 어려워요 조심 조심~', 
         difficulty : '쉬움' 
+=======
+        specialDiet:'Dairy free', 
+        cookingTime:'10분미만',
+        serving:'1인분',
+        cookingTip : '굽는거 어려워요 조심 조심~',
+        difficulty : '쉬움',
+        recipeLike:'50,000',
+        writer: '푸드파이터',
+        profileImage: 'https://placeimg.com/70/70/0',
+        profileIntro: '매일매일 네이버에서 레시피를 찾아요.밤에 활동한답니다!(주로 간식)',
+>>>>>>> Server&Db set end! write&view end - img upload ing
       }),
   ])
 
