@@ -32,9 +32,6 @@ const initialState = Map({
                 id: 0,
                 cateTitle : '주재료',
                 cateName : 'ingredient',
-<<<<<<< HEAD
-                cateArray : ['소고기', '닭고기', '돼지고기','오리고기','칠면조'],
-=======
                 cateArray : [
                     '육류 요리',
                     '채소류 요리',
@@ -47,16 +44,12 @@ const initialState = Map({
                     '제철재료 요리',
                     '가공식품 요리'
                 ],
->>>>>>> Server&Db set end! write&view end - img upload ing
                 selected: false,
             }),
             Map({
                 id: 1,
                 cateTitle : '조리법',
                 cateName : 'recipeType',
-<<<<<<< HEAD
-                cateArray : ['1Pot', '에어프라이어', '베이킹'],
-=======
                 cateArray : [
                     '밥요리',
                     '면요리',
@@ -69,16 +62,10 @@ const initialState = Map({
                     '양념/소스/잼',
                     '음료/차/커피'
                 ],
->>>>>>> Server&Db set end! write&view end - img upload ing
                 selected: false,
             }),
             Map({
                 id: 2,
-<<<<<<< HEAD
-                cateTitle : 'Cusine',
-                cateName : 'cusine',
-                cateArray : ['아프리칸', '바스크', '카우보이'],
-=======
                 cateTitle : '나라별',
                 cateName : 'cusine',
                 cateArray : [
@@ -91,16 +78,10 @@ const initialState = Map({
                     '퓨전요리',
                     '이국적인맛'
                 ],
->>>>>>> Server&Db set end! write&view end - img upload ing
                 selected: false,
             }),
             Map({
                 id: 3,
-<<<<<<< HEAD
-                cateTitle : '특별식',
-                cateName : 'specialDiet',
-                cateArray : ['Dairy free', 'Paleo', 'Gluten Free'],
-=======
                 cateTitle : '상황별',
                 cateName : 'specialDiet',
                 cateArray : [
@@ -112,49 +93,33 @@ const initialState = Map({
                     '파티/명절요리',
                     '실생활 요리'
                 ],
->>>>>>> Server&Db set end! write&view end - img upload ing
                 selected: false,
             }),
             Map({
                 id: 4,
                 cateTitle : '조리시간',
                 cateName : 'cookingTime',
-<<<<<<< HEAD
-                cateArray : ['5분미만', '10분미만', '20분미만'],
-=======
                 cateArray : ['5분', '10분', '20분', '30분', '40분', '1시간', '1시간 이상'],
->>>>>>> Server&Db set end! write&view end - img upload ing
                 selected: false,
             }),
             Map({    
                 id: 5,
                 cateTitle : '인원',
                 cateName : 'serving',
-<<<<<<< HEAD
-                cateArray : ['1인분', '2인분', '3인분'],
-=======
                 cateArray : ['1인분', '2인분', '3인분', '4인분', '5인분', '5인분 이상'],
->>>>>>> Server&Db set end! write&view end - img upload ing
                 selected: false,
             }),
             Map({    
                 id: 6,
                 cateTitle : '난이도',
                 cateName : 'difficulty',
-<<<<<<< HEAD
-                cateArray : ['쉬움', '중간', '어려움', '자격증필요'],
-=======
                 cateArray : ['쉬움', '중간', '어려움'],
->>>>>>> Server&Db set end! write&view end - img upload ing
                 selected: false,
             }),
         ]),
         setFilter: Map({}),
         prevId:'',
-<<<<<<< HEAD
-=======
         recipes: List(),
->>>>>>> Server&Db set end! write&view end - img upload ing
     })
 
 export default handleActions({
@@ -178,9 +143,6 @@ export default handleActions({
         const { payload: selectKey } = action;
         const setFilterArray = state.get('setFilter').delete(selectKey)
         return  state.set('setFilter',setFilterArray) 
-<<<<<<< HEAD
-    }
-=======
     },
     ...pender({
         type: GET_RECIPE_LIST,
@@ -190,5 +152,4 @@ export default handleActions({
             return state.set('recipes', fromJS(recipes))
         }
     })
->>>>>>> Server&Db set end! write&view end - img upload ing
 },initialState);
