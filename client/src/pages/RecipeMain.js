@@ -1,11 +1,11 @@
 import React from 'react';
 import PageTemplate from 'components/common/PageTemplate';
-import RecipeMainWrapper from 'components/RecipeMain/RecipeMainWrapper';
+import RecipeMainContainer from 'containers/RecipeMainContainer';
 
 const RecipeMain = () => {
     return(
         <PageTemplate>
-            <RecipeMainWrapper/>
+            <RecipeMainContainer/>
         </PageTemplate>
     )
 }

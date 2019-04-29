@@ -1,30 +1,19 @@
 import { createAction, handleActions } from 'redux-actions';
-<<<<<<< HEAD
-import { Map, List } from 'immutable';
-import { pender } from 'redux-pender';
-=======
 import { Map, List, fromJS } from 'immutable';
 import { pender } from 'redux-pender';
 import * as api from 'lib/api'
->>>>>>> Server&Db set end! write&view end - img upload ing
 
 export const INITIALIZE = 'RecipeListModule/INITIALIZE';
 export const ONVISIBLE = 'RecipeListModule/ONVISIBLE';
 export const ONSETFILTER = 'RecipeListModule/ONSETFILTER';
 export const ONDELETEFILTER = 'RecipeListModule/ONDELETEFILTER';
-<<<<<<< HEAD
-=======
 export const GET_RECIPE_LIST = 'RecipeListModule/GET_RECIPE_LIST';
->>>>>>> Server&Db set end! write&view end - img upload ing
 
 export const initialize = createAction(INITIALIZE);
 export const onVisible = createAction(ONVISIBLE);
 export const onSetFilter = createAction(ONSETFILTER);
 export const onDeleteFilter = createAction(ONDELETEFILTER);
-<<<<<<< HEAD
-=======
 export const getRecipeList = createAction(GET_RECIPE_LIST, api.getRecipeList);
->>>>>>> Server&Db set end! write&view end - img upload ing
 
 const initialState = Map({
         category: List([
@@ -148,7 +137,6 @@ export default handleActions({
         type: GET_RECIPE_LIST,
         onSuccess: (state, action) => {
             const { data: recipes } = action.payload;
-            console.log(recipes)
             return state.set('recipes', fromJS(recipes))
         }
     })

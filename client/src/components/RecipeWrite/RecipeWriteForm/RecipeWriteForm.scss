@@ -1,8 +1,5 @@
 .recipe_write_form {
-<<<<<<< HEAD
-=======
     margin-bottom: 150px;
->>>>>>> Server&Db set end! write&view end - img upload ing
     textarea {
         width: 100%;
         padding: 10px;
@@ -10,6 +7,29 @@
     h2 { margin: 50px 0 10px; }
     input::placeholder,
     textarea::placeholder { color: #999 }
+    .loading {
+        display: none;
+        position: fixed;
+        top:0;
+        left: 0;
+        bottom:0;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        text-align: center;
+        div {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+        p {
+            color: #fff;
+            line-height: 1.4rem;
+            font-weight: 100;
+        }
+        &.show{display: block;}
+    }
     .alert {
         margin: 0 0 15px;
         color:#999b; font-size: 0.9rem;
@@ -27,9 +47,11 @@
         align-items: center;
         justify-content: center;
         background: #ededed;
+        background-size: cover;
+        background-position: center;
         cursor: pointer;
         position: relative;
-        height: 440px;
+        height: 460px;
         
         input[type='file'] { 
             width: 100%;
@@ -116,8 +138,6 @@
             }
         }
     }
-<<<<<<< HEAD
-=======
     footer{
         position: fixed;
         width: 100%;
@@ -132,5 +152,4 @@
             margin-left: auto;
         }
     }
->>>>>>> Server&Db set end! write&view end - img upload ing
 }

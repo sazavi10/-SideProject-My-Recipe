@@ -25,7 +25,8 @@
                 word-break: break-all;
             }
             .cover_img img { 
-                width: 100%; 
+                width: 100%;
+                max-height: 181px; 
             }
             .category {
                 margin-top: 1.8rem;
@@ -50,8 +51,8 @@
                 margin: 0.9rem 0 2rem 0;
                 span {
                     color: #999;
-                    margin: 0 8px;
-                    i { margin-right: 4px;}
+                    margin: 0 12px;
+                    svg { margin-right: 6px;}
                 }
             }
         }

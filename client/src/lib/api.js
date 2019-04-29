@@ -10,3 +10,4 @@ export const writeRecipeImg = (formData, config) => axios.post('/api/file_upload
 export const getRecipe = (id) => axios.get(`/api/recipes/${id}`);
 export const getRecipeList = () => axios.get(`/api/recipes/`);
 
+

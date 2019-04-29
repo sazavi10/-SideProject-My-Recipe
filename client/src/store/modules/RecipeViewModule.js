@@ -1,18 +1,5 @@
 import { createAction, handleActions } from 'redux-actions';
 
-<<<<<<< HEAD
-import { Map } from 'immutable';
-import { pender } from 'redux-pender';
-
-//const ACTION = 'modulename/ACTION'
-
-//export const action = createAction(ACTION);
-
-const initialState = Map({});
-
-export default handleActions({
-
-=======
 import { Map, fromJS } from 'immutable';
 import { pender } from 'redux-pender';
 
@@ -34,5 +21,4 @@ export default handleActions({
             return state.set('recipe', fromJS(recipe));
         }
     })
->>>>>>> Server&Db set end! write&view end - img upload ing
 },initialState);
