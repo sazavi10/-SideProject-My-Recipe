@@ -13,7 +13,7 @@ export const initialize = createAction(INITIALIZE);
 export const onVisible = createAction(ONVISIBLE);
 export const onSetFilter = createAction(ONSETFILTER);
 export const onDeleteFilter = createAction(ONDELETEFILTER);
-export const getRecipeList = createAction(GET_RECIPE_LIST, api.getRecipeList);
+export const getRecipeList = createAction(GET_RECIPE_LIST, api.getRecipeList, meta => meta);
 
 const initialState = Map({
         category: List([
@@ -109,6 +109,7 @@ const initialState = Map({
         setFilter: Map({}),
         prevId:'',
         recipes: List(),
+        lastPage: null
     })
 
 export default handleActions({
@@ -137,7 +138,8 @@ export default handleActions({
         type: GET_RECIPE_LIST,
         onSuccess: (state, action) => {
             const { data: recipes } = action.payload;
-            return state.set('recipes', fromJS(recipes))
+            const lastPage = action.payload.headers['last-page'];
+            return state.set('recipes', fromJS(recipes)).set('lastPage', parseInt(lastPage,  10));
         }
     })
 },initialState);

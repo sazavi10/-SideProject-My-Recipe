@@ -4,14 +4,18 @@ import classNames from 'classnames/bind';
 import Button from '../Button'
 
 const cx = classNames.bind(styles);
-const page = 1
 
-const Pagination = () => (
-  <div className={cx('pagination')}>
-    <Button color='gray'>이전 페이지</Button>
-       <div className={cx('number')}> 페이지 {page} </div>
-    <Button>다음 페이지</Button>
-</div>
-);
+const Pagination = ({page, lastPage}) => {
+  const createPagePath = (page) => {
+    return `/recipelist/${page}`
+  }
+  return(
+    <div className={cx('pagination')}>
+      <Button color={page===1?'gray':''} disabled={page === 1} to={createPagePath(page - 1)}>이전 페이지</Button>
+        <div className={cx('number')}> 페이지 {page} </div>
+      <Button color={page===lastPage?'gray':''} disabled={page === lastPage } to={createPagePath(page + 1)}>다음 페이지</Button>
+  </div>
+  )
+};
 
 export default Pagination;

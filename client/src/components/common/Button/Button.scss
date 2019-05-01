@@ -11,7 +11,7 @@
     color: #fff;
     border-radius: 80px;
     -webkit-transition:background-color 0.4s;
-
+    &:hover{ color: #fff; }
     &.lessrounded {
         border-radius: 4px;
     }

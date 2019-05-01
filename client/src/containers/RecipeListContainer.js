@@ -8,13 +8,20 @@ import * as recipeListModule from 'store/modules/RecipeListModule';
 
 class RecipeListContainer extends Component {
     getRecipeList = () => {
-        const { RecipeListModule } = this.props;
-        RecipeListModule.getRecipeList();
+        const { page, RecipeListModule } = this.props;
+        RecipeListModule.getRecipeList({page});
     }
     componentDidMount() {
         const { RecipeListModule } = this.props;
         RecipeListModule.initialize();
         this.getRecipeList();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if(prevProps.page !== this.props.page){
+            this.getRecipeList();
+            document.documentElement.scrollTop = 0;
+        }
     }
 
     handleVisible = (id) => {
@@ -34,13 +41,13 @@ class RecipeListContainer extends Component {
 
     render() {
         const { handleVisible, handleSetFilter, hadleDeleteFilter } =  this;
-        const { category, setFilter, recipes } = this.props;
-        
+        const { category, setFilter, recipes, page, lastPage, loading } = this.props;
+        if(loading) return null;
         return (
             <div>
                 <RecipeCategory onVisible={handleVisible} category={category} setFilter={setFilter} onSetFilter={handleSetFilter} onDeleteFilter={hadleDeleteFilter}/>
                 <RecipeItemList recipes={recipes}/>
-                <Pagination/>
+                <Pagination page = {page} lastPage = {lastPage}/>
             </div>
         );
     }
@@ -50,7 +57,9 @@ export default connect(
     (state) => ({
         category: state.RecipeListModule.get('category'),
         setFilter: state.RecipeListModule.get('setFilter'),
-        recipes: state.RecipeListModule.get('recipes')
+        recipes: state.RecipeListModule.get('recipes'),
+        lastPage: state.RecipeListModule.get('lastPage'),
+        loading: state.pender.pending['RecipeListModule/GET_RECIPE_LIST']
     }),
     (dispatch) => ({
         RecipeListModule: bindActionCreators(recipeListModule, dispatch)

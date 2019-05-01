@@ -6,6 +6,6 @@ recipes.get('/', recipeCtrl.list)
 recipes.post('/', recipeCtrl.write)
 recipes.get('/:id', recipeCtrl.read)
 recipes.delete('/:id', recipeCtrl.remove)
-recipes.patch('/:id', recipeCtrl.update)
+recipes.patch('/like/:id', recipeCtrl.updateLike)
 
 module.exports = recipes;

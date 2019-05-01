@@ -17,9 +17,19 @@ exports.write = async (ctx) => {
     }
 };
 exports.list = async (ctx) => {
+    const page = parseInt(ctx.query.page || 1, 10)
+    if(page < 1 ) {
+        ctx.status = 400;
+        return;
+    }
     try {
         const recipes = await Recipe.find()
-        .sort({ _id: -1 }).limit(12).exec();
+        .sort({ _id: -1 })
+        .limit(12)
+        .skip((page - 1 ) * 12)
+        .exec();
+        const recipeCount = await Recipe.countDocuments().exec();
+        ctx.set('Last-page', Math.ceil(recipeCount / 12));
         ctx.body = recipes;
     } catch (e) {
         ctx.throw(e, 500);
@@ -43,5 +53,18 @@ exports.read = async (ctx) => {
 exports.remove = (ctx) => {
 };
 
-exports.update = (ctx) => {
+exports.updateLike = async (ctx) => {
+    const { id } = ctx.params;
+    try {
+        const recipeLike = ctx.request.body.recipeLike
+        const recipe = await Recipe.updateOne( {  _id: id }, { $set: {recipeLike : recipeLike } })
+        if (!recipe) {
+            ctx.status = 404;
+            return;
+        }
+        ctx.body = recipe;
+    } catch (e) {
+        ctx.throw(e, 500);
+    }
+    ctx.status = 200;
 };

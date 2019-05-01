@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import RecipeViewLeft from 'components/RecipeView/RecipeViewLeft';
 import RecipeViewRight from 'components/RecipeView/RecipeViewRight';
 import RecipeViewWrapper from 'components/RecipeView/RecipeViewWrapper';
+import { withRouter } from 'react-router-dom';
 import * as recipeViewModule from 'store/modules/RecipeViewModule';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 class RecipeViewContailner extends Component {
-  initialize = async () => {
+  initialize = async() => {
     const { RecipeViewModule, id } = this.props;
     try {
       await RecipeViewModule.getRecipe(id);
@@ -20,8 +21,20 @@ class RecipeViewContailner extends Component {
     this.initialize();
   }
 
+  handleAddRecipeLike = async() => {
+    const { recipe, id, RecipeViewModule } = this.props;
+    const { recipeLike } = recipe.toJS();
+    try {
+      await RecipeViewModule.addRecipeLike(id, { recipeLike : (recipeLike + 1)})
+      this.initialize()
+    } catch (e) {
+        console.log(e)
+    }
+  }
+
   render() {
-    const { loading, recipe } = this.props
+    const { loading, recipe } = this.props;
+    const {  handleAddRecipeLike } = this;
     if(loading) return null;
     const { recipeTitle, recipeCoverImage, recipeDescription, ingredientList, recipeBody, 
       ingredient, recipeType, cusine, specialDiet, difficulty, cookingTime, serving, 
@@ -38,6 +51,7 @@ class RecipeViewContailner extends Component {
         cookingTip = {cookingTip}
         />
         <RecipeViewRight 
+          handleAddRecipeLike = {handleAddRecipeLike}
           ingredient = {ingredient}
           recipeType = {recipeType}
           cusine = {cusine}
@@ -63,4 +77,4 @@ export default connect(
   (dispatch) => ({
     RecipeViewModule: bindActionCreators(recipeViewModule, dispatch)
   })
-) (RecipeViewContailner);
+) (withRouter(RecipeViewContailner));

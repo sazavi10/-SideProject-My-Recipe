@@ -7,7 +7,7 @@ const App = () => {
         <div>
             <Switch>
                 <Route exact path='/' component={RecipeMain}/>
-                <Route path='/recipelist/' component={RecipeList}/>
+                <Route path="/recipelist/:page?" component={RecipeList}/>
                 <Route path='/recipeview/:id' component={RecipeView}/>
                 <Route path='/recipewrite' component={RecipeWrite}/>                                                
             </Switch>

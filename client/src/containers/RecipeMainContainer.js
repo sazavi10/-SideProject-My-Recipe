@@ -8,9 +8,9 @@ import * as recipeMainModule from 'store/modules/RecipeMainModule';
 
 class RecipeMainContainer extends Component {
     getRecipeList = () => {
-        console.log('a')
-        const { RecipeMainModule } = this.props;
-        RecipeMainModule.getRecipeList();
+        
+        const { page, RecipeMainModule } = this.props;
+        RecipeMainModule.getRecipeList({page});
     }
 
     componentDidMount() {

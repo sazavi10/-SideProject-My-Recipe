@@ -3,7 +3,7 @@ import styles from './RecipeViewRight.scss';
 import classNames from 'classnames/bind';
 import Button from 'components/common/Button'
 
-const RecipeViewRight = ({ ingredient, recipeType, cusine, specialDiet, 
+const RecipeViewRight = ({ handleAddRecipeLike, ingredient, recipeType, cusine, specialDiet, 
   recipeTitle, recipeDescription, recipeLike, serving, cookingTime, difficulty }) => {
   const cx = classNames.bind(styles);
   return(
@@ -27,7 +27,7 @@ const RecipeViewRight = ({ ingredient, recipeType, cusine, specialDiet,
           </ul>
         </div>
         <div className={cx('buttons')}>
-          <Button color='violet'><i className='fas fa-heart'></i> <span>좋아요 {recipeLike}</span></Button>
+          <Button color='violet' onClick={handleAddRecipeLike}><i className='fas fa-heart'></i> <span>좋아요 {recipeLike}</span></Button>
           <Button color='gray'><i className='far fa-comment-dots'></i> <span>댓글 {recipeLike}</span></Button>
         </div>
         {/*
